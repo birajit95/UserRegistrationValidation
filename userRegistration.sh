@@ -18,3 +18,8 @@ validate(){
 read -p "Enter the first name : " firstName
 firstNamePattern='^[A-Z]{1}[a-zA-Z]{2,}$'
 validate $firstName $firstNamePattern
+
+
+read -p "Enter the Last name : " lastName
+lastNamePattern='^[A-Z]{1}[a-zA-Z]{2,}$'
+validate $lastName $lastNamePattern
