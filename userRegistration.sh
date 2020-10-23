@@ -28,3 +28,8 @@ validate $lastName $lastNamePattern
 read -p "Enter the Email: " email
 emailPattern='^[a-zA-Z]{1}[a-zA-Z0-9]+([-\.\_\+]?[0-9a-zA-Z]+)*\@[a-zA-Z]+([\.][a-z]{2,4})?([\.][a-z]{2,4})$' 
 validate $email $emailPattern
+
+
+read -p "Enter Your Mobile Number : " number
+numberPattern='^(\+91|91|0|)[[:space:]][6-9]{1}[0-9]{9}$'
+validate $number $numberPattern
