@@ -33,3 +33,8 @@ validate $email $emailPattern
 read -p "Enter Your Mobile Number : " number
 numberPattern='^(\+91|91|0|)[[:space:]][6-9]{1}[0-9]{9}$'
 validate $number $numberPattern
+
+
+read -p "Enter your password : " password
+passwordPattern='([a-zA-Z0-9]|[^a-zA-Z0-9]){8,}'
+validate $password $passwordPattern
