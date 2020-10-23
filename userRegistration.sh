@@ -23,3 +23,8 @@ validate $firstName $firstNamePattern
 read -p "Enter the Last name : " lastName
 lastNamePattern='^[A-Z]{1}[a-zA-Z]{2,}$'
 validate $lastName $lastNamePattern
+
+
+read -p "Enter the Email: " email
+emailPattern='^[a-zA-Z]{1}[a-zA-Z0-9]+([-\.\_\+]?[0-9a-zA-Z]+)*\@[a-zA-Z]+([\.][a-z]{2,4})?([\.][a-z]{2,4})$' 
+validate $email $emailPattern
