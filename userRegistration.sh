@@ -1,4 +1,4 @@
-#! /bin/bash -x
+#! /bin/bash 
 
 echo "Welcome to User Registration Program"
 
@@ -38,3 +38,34 @@ validate $number $numberPattern
 read -p "Enter your password : " password
 passwordPattern='(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9])([a-zA-Z0-9]|[^a-zA-Z0-9]){8,}'
 validate $password $passwordPattern
+
+
+
+
+invalidEmailList=('abc' 'abc@.com.my' 'abc123@gmail.a' 'abc123@.com' 
+                  'abc123@.com.com' '.abc@abc.com' 'abc()*@gmail.com'
+                   'abc@%*.com' 'abc..2002@gmail.com' 'abc.@gmail.com' 
+                   'abc@abc@gmail.com' 'abc@gmail.com.1a' 'abc@gmail.com.aa.au' )
+
+validEmailList=('abc@yahoo.com' 'abc-100@yahoo.com'
+                'abc.100@yahoo.com' 'abc111@abc.com'
+                  'abc-100@abc.net' 'abc.100@abc.com.au'
+                  'abc@1.com' 'abc@gmail.com.com' 'abc+100@gmail.com')
+
+
+n=${#validEmailList[@]}
+count=0
+while [ $count -lt $n ]
+do
+   validate ${validEmailList[$count]} $emailPattern
+   ((count++))
+done
+
+
+m=${#invalidEmailList[@]}
+count2=0
+while [ $count2 -lt $m ]
+do
+   validate ${invalidEmailList[$count]} $emailPattern
+   ((count2++))
+done
