@@ -36,5 +36,5 @@ validate $number $numberPattern
 
 
 read -p "Enter your password : " password
-passwordPattern='([a-zA-Z0-9]|[^a-zA-Z0-9]){8,}'
+passwordPattern='(?=.*[A-Z])([a-zA-Z0-9]|[^a-zA-Z0-9]){8,}'
 validate $password $passwordPattern
