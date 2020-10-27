@@ -42,6 +42,8 @@ validate $password $passwordPattern
 
 
 
+# lists of all valid and invalid email ids
+
 invalidEmailList=('abc' 'abc@.com.my' 'abc123@gmail.a' 'abc123@.com' 
                   'abc123@.com.com' '.abc@abc.com' 'abc()*@gmail.com'
                    'abc@%*.com' 'abc..2002@gmail.com' 'abc.@gmail.com' 
@@ -52,6 +54,8 @@ validEmailList=('abc@yahoo.com' 'abc-100@yahoo.com'
                   'abc-100@abc.net' 'abc.100@abc.com.au'
                   'abc@1.com' 'abc@gmail.com.com' 'abc+100@gmail.com')
 
+
+# validating all emails
 
 n=${#validEmailList[@]}
 count=0
